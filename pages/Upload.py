@@ -76,7 +76,7 @@ if dataPredict is not None:
         x=profit_by_PB.index,
         y="TotalCharges",
         orientation="v",
-        title="<b>Sales by Payment Method</b>",
+        title="<b>Sales by Online Security</b>",
         color_discrete_sequence=["#0083B8"] * len(profit_by_PB),
         template="plotly_white",
     )
@@ -134,7 +134,7 @@ if dataPredict is not None:
     with col1:
         pil1 = st.selectbox(label="X-Axis", options=opsi, index=0)
     with col2:
-        pil2 = st.selectbox(label="y-axis", options=opsi, index=1)
+        pil2 = st.selectbox(label="Y-axis", options=opsi, index=1)
 
 
     scatter_fig = dfPredict.plot_bokeh.scatter(x=pil1, y=pil2,
@@ -172,11 +172,11 @@ if dataPredict is not None:
             }
         }
 
-        url = "http://d7229f1e-42b3-4139-a355-1e156ab69942.southeastasia.azurecontainer.io/score"
+        url = "http://a0352394-deae-4c5e-a659-9884ce9043a8.southeastasia.azurecontainer.io/score"
         payload = json.dumps(kirim)
         headers = {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer ddjCdzF6wg0CyPszEdMhwXfuQ4fffbKN'
+            'Authorization': 'Bearer Q1qnVJEfB0icgfe7Maakg95oaByKZGHO'
         }
 
         response = requests.request("POST", url, headers=headers, data=payload)
