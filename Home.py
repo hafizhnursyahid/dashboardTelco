@@ -7,8 +7,8 @@ df = df.dropna()
 
 
 
-st.title("Dataset Costumer Telco")
-st.markdown("Overview the **behavior** of costumer")
+st.title("Telco Customer Dataset")
+st.markdown("Overview of customers behaviour")
 
 st.write(df)
 
@@ -28,7 +28,7 @@ with right:
 
 keterangan = pd.read_excel("./desc.xlsx")
 
-st.title("Keterangan Setiap Atribut Kolom")
+st.title("Keterangan Atribut Setiap Kolom")
 hide_table_row_index = """
             <style>
             thead tr th:first-child {display:none}
