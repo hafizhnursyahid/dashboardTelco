@@ -1,6 +1,5 @@
 from lib import *
 
-st.set_page_config(page_title='Overview', page_icon=':smiley:')
 file = "./data.xlsx"
 df = pd.read_excel(file)
 df["TotalCharges"] = pd.to_numeric(df["TotalCharges"], errors='coerce')
