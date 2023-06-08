@@ -50,7 +50,7 @@ fig_product_sales = px.bar(
     x="TotalCharges",
     y=profit_by_PM.index,
     orientation="h",
-    title="<b>Total Charges by Payment Method</b>",
+    title="<b>Sales by Payment Method</b>",
     color_discrete_sequence=["#0083B8"] * len(profit_by_PM),
     template="plotly_white",
 )
@@ -67,7 +67,7 @@ fig_PB_sales = px.bar(
     x=profit_by_PB.index,
     y="TotalCharges",
     orientation="v",
-    title="<b>Total Charges by Online Security Type</b>",
+    title="<b>Sales by Online Security Type</b>",
     color_discrete_sequence=["#0083B8"] * len(profit_by_PB),
     template="plotly_white",
 )
@@ -125,7 +125,7 @@ opsi = df.drop(columns=["Churn","gender","SeniorCitizen","Partner","Dependents",
 with col1:
     pil1 = st.selectbox(label="X-Axis", options=opsi, index=0)
 with col2:
-    pil2 = st.selectbox(label="y-axis", options=opsi, index=2)
+    pil2 = st.selectbox(label="Y-axis", options=opsi, index=2)
 
 color_encode = st.checkbox(label = "Churn Type")
 
